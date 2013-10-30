@@ -1,0 +1,21 @@
+<%= form_for @workouts do |work|%>
+<p>
+		<%= work.label :name%>
+		<%= work.text_field :name %>
+</p>
+
+<p>
+		<%= work.label :typing_system, "Typing System"%>
+		<%= work.text_field :typing_system %>
+</p>
+
+<p>
+		<%= work.label :memory_management, "Memory Management"%>
+		<%= work.text_field :memory_management %>
+</p>
+
+<p>
+<%= work.submit%>
+</p>
+
+<%end%>

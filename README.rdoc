@@ -1,0 +1,31 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version 2.0
+
+* Ruby on Rails 4.0
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* Features: Mobile friendly version of a Workout Program. Login for both user/administrator. 
+  Calendar of workouts for the month, broken into individual days. 
+   User checks off a complete button to signify completion of workout. Administrator, can edit any workout day for customization.
+
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
