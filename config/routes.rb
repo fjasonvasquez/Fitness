@@ -1,7 +1,10 @@
 Fitness::Application.routes.draw do
 
 get 'authentications/new' => 'authentications#new'
+get 'authentications/:id' => 'authentications#show'
 post 'authentications' => 'authentications#create'
+delete 'authentications/:id' => 'authentications#destroy'
+put 'authentications/:id' => 'authentications#update'
 
  get 'users' => 'users#index'
  get 'users/new' => 'users#new' #add new users

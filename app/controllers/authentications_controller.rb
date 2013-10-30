@@ -19,6 +19,12 @@ end
 	          flash.now.alert = "Unable to sign you in. Please try again."
 	          render :new
 	        end
-	    end
+
+	def destroy
+		Users.find(params[:id]).destroy
+		redirect_to workouts_url
 	end
+end
+end
+
 end
