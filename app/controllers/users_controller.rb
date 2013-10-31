@@ -13,15 +13,16 @@ end
 	end
 
 	def create
-	 @user = User.new(params[:user]
+	 @user = User.create(params[:user]
 			.permit(:email, :password, :password_confirmation))
 	 @user.save
-		redirect_to action: "new"
+		# redirect_to action: "new"
+		redirect_to workouts_url
 	end
 
 	def destroy
 		Users.find(params[:id]).destroy
-		redirect_to workouts_url
+		redirect_to authentications_url
 	end
 end
 

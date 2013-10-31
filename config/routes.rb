@@ -1,21 +1,22 @@
 Fitness::Application.routes.draw do
 
-get 'authentications/new' => 'authentications#new'
-get 'authentications/:id' => 'authentications#show'
-post 'authentications' => 'authentications#create'
-delete 'authentications/:id' => 'authentications#destroy'
-put 'authentications/:id' => 'authentications#update'
+resources :authentications, only:[:new, :create, :destroy]
+	# get 'authentications/new' => 'authentications#new'
+	# post 'authentications' => 'authentications#create'
+	# get 'authentications/:id' => 'authentications#show'
+	# delete 'authentications/:id' => 'authentications#destroy'
+	# put 'authentications/:id' => 'authentications#update'
 
- get 'users' => 'users#index'
- get 'users/new' => 'users#new' #add new users
- get 'users/:id' => 'users#show'
- post 'users' => 'users#create'
+  get 'users' => 'users#index'
+  get 'users/new' => 'users#new' #add new users
+  get 'users/:id' => 'users#show'
+  post 'users' => 'users#create'
 
-delete 'users/:id/edit' => 'users#edit'
+  delete 'users/:id/edit' => 'users#edit'
 
-post 'users' => 'users#create'
-delete 'users' => 'users#destroy'
-put 'users/:id' => 'users#update'
+  post 'users' => 'users#create'
+  delete 'users' => 'users#destroy'
+  put 'users/:id' => 'users#update'
 
   get 'workouts' => 'workouts#index'
   get 'workouts/new' => 'workouts#new' #shows form to add new workout day

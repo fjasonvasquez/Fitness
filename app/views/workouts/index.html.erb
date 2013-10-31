@@ -15,6 +15,7 @@
       <td><%= button_to "delete", { action: "destroy", id: workout.id},
       {method: :delete, data:{confirm: "Are you sure?"}}
       %></td>
+      <td><%= button_to "edit", { action: "edit", id: workout.id}%></td>
     </tr>
 </table>
   <% end %>
