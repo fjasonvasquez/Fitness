@@ -5,24 +5,35 @@ class WorkoutsController < ApplicationController
 	end
 
 	def new
-		@workouts = Workout.new
+		@workout = Workout.new
 	end
 
 	def show
-		@workouts = Workout.find(params[:id])
+		@workout = Workout.find(params[:id])
 	end
 
 	def create
-		@workout = Workout.new(params[:workout].permit(:name, :typing_system, :memory_management))
+		@workout = Workout.new(params[:workout].permit(:name, :repetitions, :sets))
 		@workout.save
 		redirect_to workouts_path
 	end
 
+	def edit
+		@workout = Workout.find(params[:id])
+	end
+
+	def update
+		@workout = Workout.find(params[:id])
+		if @workout.update_attributes(params[:workout].permit(:name, :repetitions, :sets))
+			redirect_to @workout
+		else 
+			render "edit"
+		end
+	end
 
 	def destroy
 		Workout.find(params[:id]).destroy
 		redirect_to workouts_url
 	end
-
 
 end

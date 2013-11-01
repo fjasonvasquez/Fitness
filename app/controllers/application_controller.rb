@@ -6,13 +6,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-  	if session[:user_id]
-  		@current_user ||= User.find_by(id: session[:user_id])
-		end
-		end
+    begin
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    rescue Mongoid::Errors::DocumentNotFound
+    nil
+    end
+end
 
 def authenticate_user
-	redirect_to root_url unless current_user
+	redirect_to authentications_url unless current_user
 	end
 
 end

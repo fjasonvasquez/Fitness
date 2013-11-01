@@ -2,8 +2,8 @@ class Workout
 	include Mongoid::Document
 
 	field :name, type: String
-	field :typing_system, type: String
-	field :memory_management, type: String
+	field :repetitions, type: Integer	
+	field :sets, type: Integer
 
 
 # before_save :hashed_password

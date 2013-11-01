@@ -1,3 +1,4 @@
-<%= @workouts.name %>
-<%= @workouts.typing_system %>
-<%= @workouts.memory_management %>
+<%= @workout.name %>
+<%= @workout.repetitions %>
+<%= @workout.sets %>
+<%= link_to "edit", edit_workout_path(@workout) %>

@@ -3,19 +3,19 @@
 
 <table>
   <tr>
-    <th>Excercise Plan</th>
-    <th>Push-Pull</th>
-    <th>Complete</th>
+    <th>Excercise</th>
+    <th>Repetitions</th>
+    <th>Sets</th>
   </tr>
   <% @workouts.each do |workout| %>
     <tr>
       <td><%= workout.name %></td>
-      <td><%= workout.typing_system %></td>
-      <td><%= workout.memory_management %></td>
+      <td><%= workout.repetitions %></td>
+      <td><%= workout.sets %></td>
       <td><%= button_to "delete", { action: "destroy", id: workout.id},
       {method: :delete, data:{confirm: "Are you sure?"}}
       %></td>
-      <td><%= button_to "edit", { action: "edit", id: workout.id}%></td>
+      <td><%= link_to "edit", edit_workout_path(workout) %></td>
     </tr>
 </table>
   <% end %>
