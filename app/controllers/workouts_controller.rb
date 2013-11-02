@@ -33,7 +33,7 @@ class WorkoutsController < ApplicationController
 
 	def destroy
 		Workout.find(params[:id]).destroy
-		redirect_to workouts_url
+		redirect_to authentications_url
 	end
 
 end

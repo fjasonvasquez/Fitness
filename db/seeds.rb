@@ -9,10 +9,10 @@
 Workout.destroy_all
 
 Workout.create([
-	{name: 'Ruby', typing_system: 'dynamic', memory_management: 'garbage collection'},
-	{name: 'Java', typing_system: 'static', memory_management: 'garbage collection'},
-	{name: 'C++', typing_system: 'static', memory_management: 'manual'},
-	{name: 'ObjC', typing_system: 'static', memory_management: 'reference count'}
+	{name: 'Pushup', repetitions: 'integer', sets: 'integer'},
+	#{name: 'Java', typing_system: 'static', memory_management: 'garbage collection'},
+	#{name: 'C++', typing_system: 'static', memory_management: 'manual'},
+	#{name: 'ObjC', typing_system: 'static', memory_management: 'reference count'}
 	])
 
 User.destroy_all

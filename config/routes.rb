@@ -6,18 +6,17 @@ resources :workouts
 	get 'authentications/new' => 'authentications#new'
 	post 'authentications' => 'authentications#create'
 	get 'authentications/:id' => 'authentications#show'
-	delete 'authentications/:id' => 'authentications#destroy'
+	delete 'authentications' => 'authentications#destroy'
 	put 'authentications/:id' => 'authentications#update'
 
   get 'users' => 'users#index'
   get 'users/new' => 'users#new' #add new users
   get 'users/:id' => 'users#show'
   post 'users' => 'users#create'
-
   delete 'users/:id/edit' => 'users#edit'
 
   post 'users' => 'users#create'
-  delete 'users' => 'users#destroy'
+  delete 'users/:id' => 'users#destroy'
   put 'users/:id' => 'users#update'
 
   # get 'workouts' => 'workouts#index'

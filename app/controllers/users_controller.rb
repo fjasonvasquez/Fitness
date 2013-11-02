@@ -22,7 +22,7 @@ end
 
 	def destroy
 		Users.find(params[:id]).destroy
-		redirect_to authentications_url
+		redirect_to authentications_new_path
 	end
 end
 
