@@ -20,6 +20,7 @@ class WorkoutsController < ApplicationController
 
 	def edit
 		@workout = Workout.find(params[:id])
+
 	end
 
 	def update
@@ -33,7 +34,7 @@ class WorkoutsController < ApplicationController
 
 	def destroy
 		Workout.find(params[:id]).destroy
-		redirect_to authentications_url
+		redirect_to workouts_url
 	end
 
 end
