@@ -3,16 +3,16 @@
 <h2>Strength Training Workout I</h2>
 
 <table>
-  <thead>
     <tr>
       <th>Excercise</th>
       <th>Repetitions</th>
       <th>Sets</th>
+      <th></th>
     </tr>
-  </thead>
+ 
       <td><% @workouts.each do |workout| %></td>
     <tr>
-      <th><%= workout.name %></th>
+      <td><%= workout.name %></td>
       <td><%= workout.repetitions %></td>
       <td><%= workout.sets %></td>
       <td><%= button_to "delete", { action: "destroy", id: workout.id},
@@ -20,5 +20,5 @@
       <td><%= link_to "edit", edit_workout_path(workout) %></td>
       <br>
     </tr>
+    <% end %>
 </table>
-  <% end %>
