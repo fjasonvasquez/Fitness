@@ -11,7 +11,57 @@
  *= require_self
  *= require_tree .
  */
+html {
+	height: 1136px;
+	width: 640px;
+}
+ h1 {
+ 	text-align: center;
+ 	color: red;
+ 	font-family: sans-serif;
+ 	font-size: 32px;
+ }
 
- h1 {color: black;}
+h2 {
+ 	text-align: center;
+ 	color: red;
+ 	font-family: sans-serif;
+ 	font-size: 24px;
+ }
 
- body
+ table {
+ 	text-align: center;
+ 	color: yellow;
+ 	font-family: sans-serif;
+ 	font-size: 20px;
+ }
+ th {
+ 	color: yellow;
+ 	text-align: center;
+ }
+
+ tr {
+ 	color: red;
+ 	text-align: center;
+}
+
+ td {
+ 	color: yellow;
+ 	text-align: center;
+ }
+
+ label {
+ 	color: yellow;
+ 	text-align: center;
+ }
+
+ body {
+ 	background-color: black;
+ 	height: 1136px;
+ 	width: 640px;
+ 	font-family: sans-serif;
+ 	color: yellow;
+ 	font-size: 20px;
+ 	font-weight: bold;
+ 	text-align: center;
+ }

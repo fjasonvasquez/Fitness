@@ -1,16 +1,18 @@
 <%= session[:user_id] %>
 <h1>Monday day 1</h1>
-<h2>Strength Training Workout I</h1>
+<h2>Strength Training Workout I</h2>
 
 <table>
-  <tr>
-    <th>Excercise</th>
-    <th>Repetitions</th>
-    <th>Sets</th>
-  </tr>
-  <% @workouts.each do |workout| %>
+  <thead>
     <tr>
-      <td><%= workout.name %></td>
+      <th>Excercise</th>
+      <th>Repetitions</th>
+      <th>Sets</th>
+    </tr>
+  </thead>
+      <td><% @workouts.each do |workout| %></td>
+    <tr>
+      <th><%= workout.name %></th>
       <td><%= workout.repetitions %></td>
       <td><%= workout.sets %></td>
       <td><%= button_to "delete", { action: "destroy", id: workout.id},
